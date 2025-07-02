@@ -70,6 +70,10 @@ public class QuestsScreen : BaseScreen
             {
                 questItemUI.RefreshObjective(objectiveEvent.ID);
             }
+            foreach (QuestItemUI questItemUI in _questsUI.Values)
+            {
+                questItemUI.RefreshQuest();
+            }
         }
         else if (gameEvent is QuestUpdatedEvent)
         {
